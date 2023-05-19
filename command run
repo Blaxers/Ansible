@@ -1,0 +1,7 @@
+ansible-playbook ./playbooks/test01.yaml -i inventory.yaml
+ansible-playbook ./playbooks/addnewuser.yaml -i firstlogin.ini 
+
+
+
+
+ssh -L localhost:1024:localhost:9100 sshuser@localhost -p 601 -i ./keys/alpine-key 

@@ -1,0 +1,31 @@
+---
+ubuntu:
+  hosts:
+    ub1:
+      ansible_port: 601
+      ansible_user: "sshuser"
+      ansible_host: 127.0.0.1
+      ansible_ssh_password: '{ host_vars.web1.ansible_password | vault_decrypt }'
+      ansible_python_interpreter: "/usr/bin/python3.10"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+    ub2:
+      ansible_port: 602
+      ansible_user: "sshuser"
+      ansible_host: 127.0.0.1
+      ansible_ssh_password: '{ host_vars.web1.ansible_password | vault_decrypt }'
+      ansible_python_interpreter: "/usr/bin/python3.10"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+    ub3:
+      ansible_port: 601
+      ansible_user: "sshuser"
+      ansible_host: 127.0.0.1
+      ansible_ssh_password: '{ host_vars.web1.ansible_password | vault_decrypt }'
+      ansible_python_interpreter: "/usr/bin/python3.10"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+    ub4:
+      ansible_port: 602
+      ansible_user: "sshuser"
+      ansible_host: 127.0.0.1
+      ansible_ssh_password: '{ host_vars.web1.ansible_password | vault_decrypt }'
+      ansible_python_interpreter: "/usr/bin/python3.10"
+      ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
